@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>CMS</title>
+        <!-- Compiled and minified CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    </head>
+    <nav>
+        <div class="nav-wrapper">
+        <a href="/" class="brand-logo">Tech Board</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="/dashboard">Dashboard</a></li>
+            {{#if loggedIn}}
+            <li><button class="btn" id="logout">Logout</button></li>
+            {{else}}
+            <li><a href="/login">Login</a></li>
+            {{/if}}
+        </ul>
+        </div>
+    </nav>
+    <body>
+        {{{ body }}}
+        <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <!-- Only include the logout script if the user is logged in -->
+        {{#if loggedIn}}
+        <script src="/js/logout.js"></script>
+        {{/if}}
+    </body>
+</html>
