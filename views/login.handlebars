@@ -1,17 +1,53 @@
-<h2>Login</h2>
-
-<form class="form login-form">
-  <div class="form-group">
-    <label for="email-login">email:</label>
-    <input class="form-input" type="text" id="email-login" />
-  </div>
-  <div class="form-group">
-    <label for="password-login">password:</label>
-    <input class="form-input" type="password" id="password-login" />
-  </div>
-  <div class="form-group">
-    <button class="btn btn-primary" type="submit">login</button>
-  </div>
-</form>
+<div class="card">
+    <div class="card-tabs">
+        <ul class="tabs tabs-fixed-width">
+        <li class="tab"><a href="#test4">Login</a></li>
+        <li class="tab"><a class="active" href="#test5">Signup</a></li>
+        </ul>
+    </div>
+    <div class="card-content grey lighten-4">
+        <div id="test4">
+            <form class="form login-form">
+                <div class="form-group">
+                    <label for="email-login">email:</label>
+                    <input class="form-input" type="text" id="email-login" />
+                </div>
+                <div class="form-group">
+                    <label for="password-login">password:</label>
+                    <input class="form-input" type="password" id="password-login" />
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-primary" type="submit">login</button>
+                </div>
+            </form>
+        </div>
+        <div id="test5">
+            <form class="form submit-form">
+                <div class="form-group">
+                    <label for="email-login">username:</label>
+                    <input class="form-input" type="text" id="username-login" />
+                </div>
+                <div class="form-group">
+                    <label for="email-login">email:</label>
+                    <input class="form-input" type="text" id="signup-email-login" />
+                </div>
+                <div class="form-group">
+                    <label for="password-login">password:</label>
+                    <input class="form-input" type="password" id="signup-password-login" />
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-primary" type="submit">sign up</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
 
 <script src="/js/login.js"></script>
+<script src="/js/signup.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+  $(document).ready(function(){
+    $('.tabs').tabs();
+  });
+</script>
