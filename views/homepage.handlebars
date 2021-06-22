@@ -1,6 +1,5 @@
 <div class="collection">
-    <a href="#!" class="collection-item">Alvin</a>
-    <a href="#!" class="collection-item active">Alvin</a>
-    <a href="#!" class="collection-item">Alvin</a>
-    <a href="#!" class="collection-item">Alvin</a>
+    {{#each posts as | post |}}
+    <a href="#!" class="collection-item">{{post_body}}</a>
+    {{/each}}
 </div>
