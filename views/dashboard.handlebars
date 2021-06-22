@@ -1,6 +1,9 @@
-<div class="collection">
-    <a href="#!" class="collection-item">BBB</a>
-    <a href="#!" class="collection-item active">Alvin</a>
-    <a href="#!" class="collection-item">Alvin</a>
-    <a href="#!" class="collection-item">Alvin</a>
+<div class="row valign-wrapper">
+    <h3 class="col">My Posts</h3>
+    <a href="/dashboard/create"><button style="margin-top: 20px;" class="col btn btn-primary">New Post</button></a>
+</div>
+<div class="row collection">
+    {{#each posts as | post |}}
+    <a href="#!" class="collection-item">{{post_title}}</a>
+    {{/each}}
 </div>

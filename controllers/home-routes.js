@@ -20,12 +20,6 @@ router.get('/', async (req, res) => {
     }
 });
 
-router.get('/dashboard', withAuth, (req, res) => {
-    res.render('dashboard', {
-        loggedIn: req.session.loggedIn,
-    });
-});
-
 // Log in page
 router.get('/login', (req, res) => {
     res.render('login', {
