@@ -1,8 +1,10 @@
-<div class="row">
+<div class="row" id="postCard" postId={{post.id}}>
     <div class="col s12 m12">
         <div class="card blue-grey darken-1">
         <div class="card-content white-text">
             <span style="font-size: 12px;" class="card-title"><h3>{{post.post_title}} - by {{author.name}}</h3>Created @ {{post.created_at}}</span>
             <p class="flow-text">{{post.post_body}}</p>
+        </div>
     </div>
+    {{> post-comments post}}
 </div>
