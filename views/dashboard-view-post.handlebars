@@ -10,9 +10,11 @@
             <label for="postContent">Description</label>
         </div>
         <div class="form-group">
-            <button class="btn btn-primary" type="submit">Update</button>
+            <button class="btn btn-primary" id="updatePost" postId="{{post.id}}" type="submit">Update</button>
+            <button class="btn btn-primary" id="deletePost" postId="{{post.id}}" type="submit">Delete</button>
         </div>
       </div>
     </form>
 </div>
 <script src="/js/update.js"></script>
+<script src="/js/delete.js"></script>

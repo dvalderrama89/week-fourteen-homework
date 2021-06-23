@@ -5,10 +5,11 @@ const postCreationFormHandler = async (event) => {
     // Gather the data from the form elements on the page
     const title = document.querySelector('#post_title').value.trim();
     const postBody = document.querySelector('#postContent').value.trim();
-  
+    const postId = document.querySelector('#updatePost').getAttribute('postId');
+
     if (title && postBody) {
       // Send the e-mail and postBody to the server
-      const response = await fetch('/api/posts/update', {
+      const response = await fetch(`/api/posts/update/${postId}`, {
         method: 'PUT',
         body: JSON.stringify({ title, postBody }),
         headers: { 'Content-Type': 'application/json' },
