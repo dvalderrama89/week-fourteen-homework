@@ -8,7 +8,7 @@ router.get('/view/:id', async (req, res) => {
         const authorData = await User.findByPk(postData.author_id);
         const author = authorData.get({ plain: true });
         const post = postData.get({ plain: true });
-        res.render('post-content', {post, author})
+        res.render('post-content', {loggedIn: req.session.loggedIn, post, author})
     } catch (err) { 
         console.log(err);
         res.render('404');
